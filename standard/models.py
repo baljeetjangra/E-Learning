@@ -21,7 +21,7 @@ class Chapter(models.Model):
     updated_at = models.DateTimeField(auto_now=True)
     
     def __str__(self):
-        return f"{self.name} of {self.standard.name}"
+        return f"{self.name}"
 
 class Note(models.Model):
     standard = models.ForeignKey(Standard, on_delete=models.SET_NULL, null=True)
