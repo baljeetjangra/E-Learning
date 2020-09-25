@@ -31,7 +31,7 @@ class Standard(models.Model):
 
 class Chapter(models.Model):
     standard = models.ForeignKey(Standard, on_delete=models.SET_NULL, null=True)
-    subject = models.ForeignKey(Standard.subject,related_name='subject_key', on_delete=models.CASCADE)
+    subject = models.ForeignKey(Standard.subject, related_name='subject_key', on_delete=models.CASCADE)
     chapter_no = models.CharField(max_length=100)
     chapter_name = models.CharField(max_length=100)
     slug = models.SlugField(unique=True)
