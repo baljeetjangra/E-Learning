@@ -1,3 +1,4 @@
 {
-    "python.pythonPath": "C:\\Users\\Baljeet\\.virtualenvs\\Rishab-fd9dxGHW\\Scripts\\python.exe"
+    "python.pythonPath": "C:\\Users\\Baljeet\\.virtualenvs\\Rishab-fd9dxGHW\\Scripts\\python.exe",
+    "python.linting.enabled": false
 }
