@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Standard, Chapter, Note, Subject
+from .models import Standard, Chapter,  Subject
 # Register your models here.
 
 class SubjectAdmin(admin.ModelAdmin):
@@ -25,12 +25,12 @@ class ChapterAdmin(admin.ModelAdmin):
     prepopulated_fields ={'slug':('chapter_name',)}
 admin.site.register(Chapter, ChapterAdmin)
 
-class NoteAdmin(admin.ModelAdmin):
-    list_display = ('name','chapter','standard','created_at','updated_at')
-    search_fields = ['name']
-    date_hierarchy = 'created_at'
-    list_filter =('chapter','standard')   
-    prepopulated_fields ={'slug':('name',)}
+# class NoteAdmin(admin.ModelAdmin):
+#     list_display = ('name','chapter','standard','created_at','updated_at')
+#     search_fields = ['name']
+#     date_hierarchy = 'created_at'
+#     list_filter =('chapter','standard')   
+#     prepopulated_fields ={'slug':('name',)}
 
 
-admin.site.register(Note, NoteAdmin)
+# admin.site.register(Note, NoteAdmin)

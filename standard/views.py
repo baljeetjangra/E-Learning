@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.views.generic import ListView, DetailView
-from .models import Standard, Chapter, Note
+from .models import Standard, Chapter
 
 
 def home(request):
