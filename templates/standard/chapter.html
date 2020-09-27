@@ -43,13 +43,13 @@
                         <div class="special_cource_text">
                             <a href="{{object.slug}}" class="btn_4">{{object.chapter_no}}</a>
                             <h4>Free</h4>
-                            <a href="{{object.slug}}">
+                            <a href="{{object.upload_file.url}}">
                                 <h3>{{object.chapter_name}}</h3>
                             </a>
                             {% if object.description %}
                             <p>{{object.description}}</p>
                             {% else %}
-                            <p>{{object.chapter_name}} - Notes</p>
+                            <p>{{object.chapter}} - Notes</p>
                             {% endif %}
                             <!-- <div class="author_info">
                                 <div class="author_img">

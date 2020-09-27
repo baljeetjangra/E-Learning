@@ -1,5 +1,5 @@
 {% extends "base.html" %}
-
+{% load static %}
 {% block head_title %}
   
 {% endblock head_title %}
@@ -13,8 +13,8 @@
                 <div class="col-lg-12">
                     <div class="breadcrumb_iner text-center">
                         <div class="breadcrumb_iner_item">
-                            <h2>Course Details</h2>
-                            <p>Home<span>/</span>Course Details</p>
+                            <h2>{{chapter_detail.chapter_name|upper}} - Notes</h2>
+                            <p>Home<span>/</span>Class<span>/</span>Subject<span>/</span>Chapter</p>
                         </div>
                     </div>
                 </div>
@@ -26,10 +26,22 @@
     <!--================ Start Course Details Area =================-->
     <section class="course_details_area section_padding">
         <div class="container">
-            <div class="row">
+            <div class="text-center mb-5">
+               <h4 class="title_top"> {{chapter_detail.chapter_no|upper}}</h4>
+               <h4><button class="btn_4">{{chapter_detail.chapter_name|upper}}</button></h4>
+            </div>
+            {{chapter_detail.upload_file.url}} <br>
+            <iframe src="{{chapter_detail.upload_file.url}}" width="100%" height="500px">
+         </iframe>
+         <embed src="{{chapter_detail.upload_file.url}}" width="500" height="375" type="application/pdf">
+            <div class="text-center">
+
+                <a class="btn_1" target="_blank" href="{{chapter_detail.upload_file.url}}">Download Now</a>
+            </div>
+             <!-- <div class="row">
                 <div class="col-lg-8 course_details_left">
                     <div class="main_image">
-                        <img class="img-fluid" src="img/single_cource.png" alt="">
+                        <img class="img-fluid" src="{% static "img/single_cource.png" %}" alt="">
                     </div>
                     <div class="content_wrapper">
                         <h4 class="title_top">Objectives</h4>
@@ -279,7 +291,7 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> -->
         </div>
     </section>
     <!--================ End Course Details Area =================-->
